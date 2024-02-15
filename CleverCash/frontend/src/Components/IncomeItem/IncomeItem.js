@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { bitcoin, book, calender1, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from "../../utils/Icons";
 import Button from "../Button/Button";
+import { dateFormat } from "../../utils/dateFormat";
 
 function IncomeItem({
     id,
@@ -52,7 +53,7 @@ function IncomeItem({
                 return takeaway;
             case 'clothing':
                 return clothing;
-            case 'travelling':
+            case 'traveling':
                 return freelance;
             case 'other':
                 return circle;
@@ -70,8 +71,8 @@ function IncomeItem({
                 <h5>{title}</h5>
                 <div className="inner-content">
                     <div className="text">
-                        <p>{dollar} 45</p> 
-                        <p>{calender1} {date}</p>
+                        <p>{dollar} {amount}</p> 
+                        <p>{calender1} {dateFormat(date)}</p>
                         <p>
                             {comment}
                             {description}
@@ -86,6 +87,7 @@ function IncomeItem({
                             color={'#fff'}
                             iColor={'#fff'}
                             hColor={'var(--color-green)'}
+                            onClick={() => deleteItem(id)}
                             
                         />
                     </div>

@@ -7,9 +7,9 @@ import Button from "../Button/Button";
 import { add } from "../../utils/Icons";
 
 
-function Form() {
+function ExpenseForm() {
 
-    const {addIncome, getIncomes} = useGlobalContext()
+    const {addExpense} = useGlobalContext()
     const [inputState, setInputState] =  useState({
         title:'',
         amount:'',
@@ -27,7 +27,7 @@ function Form() {
     const handleSubmit = e => {
         // to prevent refresh
         e.preventDefault()
-        addIncome(inputState)
+        addExpense(inputState)
         setInputState({
             title:'',
             amount:'',
@@ -38,13 +38,13 @@ function Form() {
     }
     //html
     return (
-        <FormStyled onSubmit={handleSubmit}>
+        <ExpenseFormStyled onSubmit={handleSubmit}>
             <div className="input-control">
                 <input 
                 type="text"
                 value={title}
                 name={'title'}
-                placeholder="Salary Title"
+                placeholder="Expense Title"
                 onChange={handleInput('title')}
                 />
             </div>
@@ -53,7 +53,7 @@ function Form() {
                 type="text"
                 value={amount}
                 name={'amount'}
-                placeholder="Salary amount"
+                placeholder="Expense amount"
                 onChange={handleInput('amount')}
                 />
             </div>
@@ -71,14 +71,14 @@ function Form() {
             <div className="selects input-control">
                 <select required value={category} name="category" id="category" onChange={handleInput('category')}>
                     <option value=""  disabled >Select Option</option>
-                    <option value="salary">Salary</option>
-                    <option value="freelancing">Freelancing</option>
-                    <option value="investments">Investments</option>
-                    <option value="stocks">Stocks</option>
-                    <option value="bitcoin">Bitcoin</option>
-                    <option value="bank">Bank Transfer</option>  
-                    <option value="youtube">Youtube</option>  
-                    <option value="other">Other</option>  
+                    <option value="education">Education</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="health">Health</option>
+                    <option value="subscriptions">Subscriptions</option>
+                    <option value="takeaways">Takeaways</option>
+                    <option value="clothing">Clothing</option>  
+                    <option value="traveling">Traveling</option>  
+                    <option value="other">Other</option> 
                 </select>
             </div>
             <div className="input-control">
@@ -86,7 +86,7 @@ function Form() {
             </div>
             <div className="submit-btn">
                 <Button
-                    name={'Add Income'}
+                    name={'Add Expense'} 
                     icon={add}
                     bPad={'.8rem 1.6rem'}
                     bRad={'30px'}
@@ -94,11 +94,11 @@ function Form() {
                     color={'#fff'}
                 />
             </div>
-        </FormStyled>
+        </ExpenseFormStyled>
     )
 }
 // css
-const FormStyled = styled.form`
+const ExpenseFormStyled = styled.form`
 display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -144,4 +144,4 @@ display: flex;
         }
     }
 `;
-export default Form
+export default ExpenseForm
