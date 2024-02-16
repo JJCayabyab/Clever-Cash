@@ -1,4 +1,3 @@
-
 export const dashboard = <i className="fa-solid fa-chart-line"></i>
 export const transactions = <i className="fa-solid fa-credit-card"></i>
 export const categories = <i className="fa-solid fa-tags"></i>
@@ -29,3 +28,24 @@ export const medical = <i className="fa-solid fa-briefcase-medical"></i>
 export const tv = <i className="fa-solid fa-tv"></i>
 export const circle = <i className="fa-solid fa-circle-dot"></i>
 export const calendar = <i className="fa-solid fa-calendar-days"></i>
+
+//due dates
+export const carInsurance =  <i className="fa-solid fa-car"></i>
+export const homeInsurance =  <i className="fa-sharp fa-solid fa-house-blank"></i>
+export const gymMembership =  <i className="fa-sharp fa-solid fa-dumbbell"></i>
+export const creditCardDues =  <i className="fa-solid fa-credit-card"></i>
+export const healthInsurance =  <i className="fa-solid fa-hospitals"></i>
+export const lifeInsurance =  <i className="fa-sharp fa-solid fa-user-shield"></i>
+export const utilities =  <i className="fa-solid fa-meter-bolt"></i>
+export const softwareSubscriptions =  <i className="fa-solid fa-desktop"></i>
+
+//expense 
+export const education =  <i className="fa-solid fa-school"></i>
+export const grocery = <i className="fa-solid fa-cart-shopping"></i>
+export const transportation =<i className="fa-solid fa-car-side"></i>
+
+
+//income
+export const business = <i className="fa-solid fa-store"></i>
+export const scholarship = <i className="fa-solid fa-book"></i>
+export const gift =<i className="fa-solid fa-gift"></i>
