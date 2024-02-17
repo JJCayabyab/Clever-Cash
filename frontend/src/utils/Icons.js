@@ -51,3 +51,6 @@ export const transportation =<i className="fa-solid fa-car-side"></i>
 export const business = <i className="fa-solid fa-store"></i>
 export const scholarship = <i className="fa-solid fa-book"></i>
 export const gift =<i className="fa-solid fa-gift"></i>
+
+//analysis
+export const expAnalysis = <i className="fa-solid fa-chart-pie"></i>

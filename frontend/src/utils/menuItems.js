@@ -1,4 +1,4 @@
-import {calendar, dashboard, expenses, incomes, transactions, } from '../utils/Icons'
+import {calendar, dashboard, expAnalysis, expenses, incomes, transactions, } from '../utils/Icons'
 
 export const menuItems = [
     {
@@ -30,6 +30,18 @@ export const menuItems = [
         id: 5,
         title: "Dues",
         icon: calendar,
+        link: "/dashboard",
+    },
+    {
+        id: 6,
+        title: "Expense Analysis",
+        icon: expAnalysis,
+        link: "/dashboard",
+    },
+    {
+        id: 7,
+        title: "Income Analysis",
+        icon: expAnalysis,
         link: "/dashboard",
     },
 

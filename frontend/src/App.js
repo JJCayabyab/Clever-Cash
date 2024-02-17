@@ -9,6 +9,8 @@ import Expenses from './Components/Expenses/Expenses';
 import Dues from './Components/Dues/Dues';
 import { useGlobalContext } from './context/globalContext';
 import ViewTransactions from './Components/ViewTransactions/ViewTransactions';
+import ExpenseAnalysis from './Components/ExpenseAnalysis/ExpenseAnalysis';
+import IncomeAnalysis from './Components/IncomeAnalysis/IncomeAnalysis';
 
 
 function App() {
@@ -27,9 +29,13 @@ function App() {
       case 3:
         return <Expenses />
       case 4:
-        return<ViewTransactions />
+        return <ViewTransactions />
       case 5:
         return<Dues />
+      case 6:
+        return <ExpenseAnalysis/>
+      case 7:
+          return <IncomeAnalysis/>
       default:
         return <Dashboard />
     }
